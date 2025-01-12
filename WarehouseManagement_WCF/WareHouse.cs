@@ -15,37 +15,45 @@ namespace WarehouseManagement_WCF
         private string SqlConnString = "Server=DESKTOP-7H6L3KN;Database=Ritabrata;Integrated Security=True;TrustServerCertificate=True;";
 
 
-        public string InsertItemData(string ItemId, string ItemName, char Category, decimal Price, int Qty, string ItemType, string WhsName)
+        public string InsertItemData(string ItemId, string ItemName, string Category, string ItemType, string WhsName, double Price = 0.00, int Qty = 0)
         {
             SqlConnection Conn = null;
 
             try
             {
-                Conn = new SqlConnection(SqlConnString);
-                Conn.Open();
-
-                string SqlQuery = "INSERT INTO WarehouseManagement_WCF (ItemId,ItemName,ItemCategory,ItemPrice,ItemQty," +
-                                    "ItemType,WhName)VALUES(@ItemId,@ItemName,@Cate,@Price,@Qty,@Type,@WhsName)";
-                SqlCommand cmd = new SqlCommand(SqlQuery, Conn);
-
-                cmd.Parameters.AddWithValue("@ItemId",ItemId);
-                cmd.Parameters.AddWithValue("@ItemName", ItemName);
-                cmd.Parameters.AddWithValue("@Cate", Category);
-                cmd.Parameters.AddWithValue("@Price", Price);
-                cmd.Parameters.AddWithValue("@Qty", Qty);
-                cmd.Parameters.AddWithValue("@Type", ItemType);
-                cmd.Parameters.AddWithValue("@WhsName", WhsName);
-
-                int RowsAffected = cmd.ExecuteNonQuery();
-
-                if (RowsAffected > 0)
+                if(ItemId != "" && ItemName != "" && Category !="" && ItemType != "" && WhsName != "")
                 {
-                    return "Item Id: " + ItemId + " has inserted Successfully. Rows affected:- " + RowsAffected;
+                    Conn = new SqlConnection(SqlConnString);
+                    Conn.Open();
+
+                    string SqlQuery = "INSERT INTO WarehouseManagement_WCF (ItemId,ItemName,ItemCategory,ItemPrice,ItemQty," +
+                                        "ItemType,WhName)VALUES(@ItemId,@ItemName,@Cate,@Price,@Qty,@Type,@WhsName)";
+                    SqlCommand cmd = new SqlCommand(SqlQuery, Conn);
+
+                    cmd.Parameters.AddWithValue("@ItemId", ItemId);
+                    cmd.Parameters.AddWithValue("@ItemName", ItemName);
+                    cmd.Parameters.AddWithValue("@Cate", Category);
+                    cmd.Parameters.AddWithValue("@Price", Price);
+                    cmd.Parameters.AddWithValue("@Qty", Qty);
+                    cmd.Parameters.AddWithValue("@Type", ItemType);
+                    cmd.Parameters.AddWithValue("@WhsName", WhsName);
+
+                    int RowsAffected = cmd.ExecuteNonQuery();
+
+                    if (RowsAffected > 0)
+                    {
+                        return "Item Id: " + ItemId + " has inserted Successfully. Rows affected:- " + RowsAffected;
+                    }
+                    else
+                    {
+                        return "Something Went Wrong to insert item data.";
+                    }
                 }
                 else
                 {
-                    return "Something Went Wrong to insert item data.";
+                    return "All the parameters should be given.";
                 }
+                
             }
             catch (Exception ex)
             {
@@ -59,8 +67,7 @@ namespace WarehouseManagement_WCF
       
         }
 
-
-        public dynamic GetAllItemData() 
+        public List<ItemWareHouse> GetAllItemData() 
         {
             SqlConnection Conn = null;
 
@@ -73,7 +80,7 @@ namespace WarehouseManagement_WCF
                 SqlCommand cmd = new SqlCommand(SqlQuery, Conn);
 
                 SqlDataReader DataReader = cmd.ExecuteReader();
-                List<dynamic> ItemsList = new List<dynamic>();
+                List<ItemWareHouse> ItemsList = new List<ItemWareHouse>();
 
                 dynamic DataObject = null;
 
@@ -83,31 +90,31 @@ namespace WarehouseManagement_WCF
                     {
                         DataObject = new
                         {
-                            ItemId = DataReader["ItemId"],
-                            ItemName = DataReader["ItemName"],
-                            Category = DataReader["ItemCategory"],
-                            Price = DataReader["ItemPrice"],
-                            Quantity = DataReader["ItemQty"],
-                            ItemType = DataReader["ItemType"],
-                            WarehouseName = DataReader["WhName"],
+                            RowId = Convert.ToInt32(DataReader["Id"]),
+                            ItemId = DataReader["ItemId"].ToString(),
+                            ItemName = DataReader["ItemName"].ToString(),
+                            ItemCategory = DataReader["ItemCategory"].ToString(),
+                            ItemPrice = Convert.ToDecimal(DataReader["ItemPrice"]),
+                            ItemQty = Convert.ToInt32(DataReader["ItemQty"]),
+                            ItemType = DataReader["ItemType"].ToString(),
+                            WhName = DataReader["WhName"].ToString(),
                         };
                         ItemsList.Add(DataObject);
                     }
                 }
                 else
                 {
-                    DataObject = new
-                    {
-                        Message = "No data found in database!"
-                    };
-                    ItemsList.Add(DataObject);
+                    ItemsList.Add(new ItemWareHouse { Message = "No data found in database!" });
                 }
             
                 return ItemsList;
             }
             catch(Exception e)
             {
-                return e.Message;
+                return new List<ItemWareHouse>
+                            {
+                                new ItemWareHouse { Err = e.Message }
+                            };
             }
             finally
             {
@@ -115,8 +122,7 @@ namespace WarehouseManagement_WCF
             }
         }
 
-
-        public dynamic GetSpecificItemData(string Id)
+        public List<ItemWareHouse> GetSpecificItemData(string Id)
         {
             SqlConnection Conn = null;
 
@@ -131,7 +137,7 @@ namespace WarehouseManagement_WCF
                 cmd.Parameters.AddWithValue("@Id",Id);
 
                 SqlDataReader DataReader = cmd.ExecuteReader();
-                List<dynamic> ItemsList = new List<dynamic>();
+                List<ItemWareHouse> ItemsList = new List<ItemWareHouse>();
 
                 dynamic DataObject = null;
 
@@ -141,31 +147,31 @@ namespace WarehouseManagement_WCF
                     {
                         DataObject = new
                         {
-                            ItemId = DataReader["ItemId"],
-                            ItemName = DataReader["ItemName"],
-                            Category = DataReader["ItemCategory"],
-                            Price = DataReader["ItemPrice"],
-                            Quantity = DataReader["ItemQty"],
-                            ItemType = DataReader["ItemType"],
-                            WarehouseName = DataReader["WhName"],
+                            RowId = Convert.ToInt32(DataReader["Id"]),
+                            ItemId = DataReader["ItemId"].ToString(),
+                            ItemName = DataReader["ItemName"].ToString(),
+                            ItemCategory = DataReader["ItemCategory"].ToString(),
+                            ItemPrice = Convert.ToDecimal(DataReader["ItemPrice"]),
+                            ItemQty = Convert.ToInt32(DataReader["ItemQty"]),
+                            ItemType = DataReader["ItemType"].ToString(),
+                            WhName = DataReader["WhName"].ToString(),
                         };
                         ItemsList.Add(DataObject);
                     }
                 }
                 else
                 {
-                    DataObject = new
-                    {
-                        Message = "No data found in database!"
-                    };
-                    ItemsList.Add(DataObject);
+                    ItemsList.Add(new ItemWareHouse { Message = "Database rowId: " + Id + ", not found in database!" });
                 }
 
                 return ItemsList;
             }
             catch (Exception e)
             {
-                return e.Message;
+                return new List<ItemWareHouse>
+                            {
+                                new ItemWareHouse { Err = e.Message }
+                            };
             }
             finally
             {

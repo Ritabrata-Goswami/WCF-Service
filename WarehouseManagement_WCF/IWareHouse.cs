@@ -11,13 +11,13 @@ namespace WarehouseManagement_WCF
     public interface IWareHouse
     {
         [OperationContract]
-        string InsertItemData(string ItemId, string ItemName, char Category, decimal Price, int Qty, string ItemType, string WhsName);
+        string InsertItemData(string ItemId, string ItemName, string Category, string ItemType, string WhsName, double Price = 0.00, int Qty = 0);
 
         [OperationContract]
-        dynamic GetAllItemData();
+        List<ItemWareHouse> GetAllItemData();
 
         [OperationContract]
-        dynamic GetSpecificItemData(string Id);
+        List<ItemWareHouse> GetSpecificItemData(string Id);
     }
 
 }

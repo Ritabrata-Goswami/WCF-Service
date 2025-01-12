@@ -11,11 +11,13 @@ namespace WarehouseManagement_WCF
     public class ItemWareHouse
     {
         [DataMember]
+        public int RowId { get; set; }
+        [DataMember]
         public string ItemId { get; set; }
         [DataMember]
         public string ItemName { get; set; }
         [DataMember] 
-        public char ItemCategory { get; set; }
+        public string ItemCategory { get; set; }
         [DataMember]
         public decimal ItemPrice { get; set; }
         [DataMember]
@@ -24,5 +26,9 @@ namespace WarehouseManagement_WCF
         public string ItemType { get; set; }
         [DataMember]
         public string WhName { get; set; }
+        [DataMember]
+        public string Message { get; set; }
+        [DataMember]
+        public string Err { get; set; }
     }
 }
