@@ -1,0 +1,7 @@
+D:\Working\C#\WarehouseManagement_WCF\WarehouseManagement_WCF\bin\Debug\WarehouseManagement_WCF.dll.config
+D:\Working\C#\WarehouseManagement_WCF\WarehouseManagement_WCF\bin\Debug\WarehouseManagement_WCF.dll
+D:\Working\C#\WarehouseManagement_WCF\WarehouseManagement_WCF\bin\Debug\WarehouseManagement_WCF.pdb
+D:\Working\C#\WarehouseManagement_WCF\WarehouseManagement_WCF\obj\Debug\WarehouseManagement_WCF.csproj.AssemblyReference.cache
+D:\Working\C#\WarehouseManagement_WCF\WarehouseManagement_WCF\obj\Debug\WarehouseManagement_WCF.csproj.CoreCompileInputs.cache
+D:\Working\C#\WarehouseManagement_WCF\WarehouseManagement_WCF\obj\Debug\WarehouseManagement_WCF.dll
+D:\Working\C#\WarehouseManagement_WCF\WarehouseManagement_WCF\obj\Debug\WarehouseManagement_WCF.pdb
