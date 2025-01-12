@@ -82,13 +82,13 @@ namespace WarehouseManagement_WCF
                 SqlDataReader DataReader = cmd.ExecuteReader();
                 List<ItemWareHouse> ItemsList = new List<ItemWareHouse>();
 
-                dynamic DataObject = null;
+                ItemWareHouse DataObject = null;
 
                 if (DataReader.HasRows)
                 {
                     while (DataReader.Read()) 
                     {
-                        DataObject = new
+                        DataObject = new ItemWareHouse
                         {
                             RowId = Convert.ToInt32(DataReader["Id"]),
                             ItemId = DataReader["ItemId"].ToString(),
@@ -139,13 +139,13 @@ namespace WarehouseManagement_WCF
                 SqlDataReader DataReader = cmd.ExecuteReader();
                 List<ItemWareHouse> ItemsList = new List<ItemWareHouse>();
 
-                dynamic DataObject = null;
+                ItemWareHouse DataObject = null;
 
                 if (DataReader.HasRows)
                 {
                     while (DataReader.Read())
                     {
-                        DataObject = new
+                        DataObject = new ItemWareHouse
                         {
                             RowId = Convert.ToInt32(DataReader["Id"]),
                             ItemId = DataReader["ItemId"].ToString(),

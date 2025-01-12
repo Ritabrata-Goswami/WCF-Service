@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\Working\\C#\\WarehouseManagement_WCF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C9927130-3CA2-4739-A45A-89AD379C11E5}|WarehouseManagement_WCF\\WarehouseManagement_WCF.csproj|d:\\working\\c#\\warehousemanagement_wcf\\warehousemanagement_wcf\\iwarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9927130-3CA2-4739-A45A-89AD379C11E5}|WarehouseManagement_WCF\\WarehouseManagement_WCF.csproj|solutionrelative:warehousemanagement_wcf\\iwarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9927130-3CA2-4739-A45A-89AD379C11E5}|WarehouseManagement_WCF\\WarehouseManagement_WCF.csproj|D:\\Working\\C#\\WarehouseManagement_WCF\\warehousemanagement_wcf\\warehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9927130-3CA2-4739-A45A-89AD379C11E5}|WarehouseManagement_WCF\\WarehouseManagement_WCF.csproj|solutionrelative:warehousemanagement_wcf\\warehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,8 +11,12 @@
       "RelativeMoniker": "D:0:0:{C9927130-3CA2-4739-A45A-89AD379C11E5}|WarehouseManagement_WCF\\WarehouseManagement_WCF.csproj|solutionrelative:warehousemanagement_wcf\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9927130-3CA2-4739-A45A-89AD379C11E5}|WarehouseManagement_WCF\\WarehouseManagement_WCF.csproj|D:\\Working\\C#\\WarehouseManagement_WCF\\warehousemanagement_wcf\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{C9927130-3CA2-4739-A45A-89AD379C11E5}|WarehouseManagement_WCF\\WarehouseManagement_WCF.csproj|d:\\working\\c#\\warehousemanagement_wcf\\warehousemanagement_wcf\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{C9927130-3CA2-4739-A45A-89AD379C11E5}|WarehouseManagement_WCF\\WarehouseManagement_WCF.csproj|solutionrelative:warehousemanagement_wcf\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9927130-3CA2-4739-A45A-89AD379C11E5}|WarehouseManagement_WCF\\WarehouseManagement_WCF.csproj|D:\\Working\\C#\\WarehouseManagement_WCF\\warehousemanagement_wcf\\iwarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9927130-3CA2-4739-A45A-89AD379C11E5}|WarehouseManagement_WCF\\WarehouseManagement_WCF.csproj|solutionrelative:warehousemanagement_wcf\\iwarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,47 +26,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "App.config",
               "DocumentMoniker": "D:\\Working\\C#\\WarehouseManagement_WCF\\WarehouseManagement_WCF\\App.config",
               "RelativeDocumentMoniker": "WarehouseManagement_WCF\\App.config",
               "ToolTip": "D:\\Working\\C#\\WarehouseManagement_WCF\\WarehouseManagement_WCF\\App.config",
               "RelativeToolTip": "WarehouseManagement_WCF\\App.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAADAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-01-11T18:07:05.92Z"
+              "WhenOpened": "2025-01-11T18:07:05.92Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Class.cs",
               "DocumentMoniker": "D:\\Working\\C#\\WarehouseManagement_WCF\\WarehouseManagement_WCF\\Class.cs",
               "RelativeDocumentMoniker": "WarehouseManagement_WCF\\Class.cs",
               "ToolTip": "D:\\Working\\C#\\WarehouseManagement_WCF\\WarehouseManagement_WCF\\Class.cs",
               "RelativeToolTip": "WarehouseManagement_WCF\\Class.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAVAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T17:05:03.377Z"
+              "WhenOpened": "2025-01-11T17:05:03.377Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "WareHouse.cs",
               "DocumentMoniker": "D:\\Working\\C#\\WarehouseManagement_WCF\\WarehouseManagement_WCF\\WareHouse.cs",
               "RelativeDocumentMoniker": "WarehouseManagement_WCF\\WareHouse.cs",
               "ToolTip": "D:\\Working\\C#\\WarehouseManagement_WCF\\WarehouseManagement_WCF\\WareHouse.cs",
               "RelativeToolTip": "WarehouseManagement_WCF\\WareHouse.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAAAAAA",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAYwIsAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T17:01:34.391Z"
+              "WhenOpened": "2025-01-11T17:01:34.391Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "IWareHouse.cs",
               "DocumentMoniker": "D:\\Working\\C#\\WarehouseManagement_WCF\\WarehouseManagement_WCF\\IWareHouse.cs",
               "RelativeDocumentMoniker": "WarehouseManagement_WCF\\IWareHouse.cs",
@@ -74,8 +77,7 @@
               "RelativeToolTip": "WarehouseManagement_WCF\\IWareHouse.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T17:00:51.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-11T17:00:51.834Z"
             }
           ]
         }
